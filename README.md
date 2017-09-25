@@ -1,6 +1,26 @@
 Ton 80
 ======
 
+This is a slightly modified version of [the primary Ton80 repository](https://github.com/dart-lang/ton80)
+modified to experiment with DDC.  DDC doesn't fill easily into the main Ton80 runner.
+Instead, I've added a web entrypoint for DDC (which also makes it easy to use Chrome profiling tools).
+
+```
+> pub get
+> pub serve
+```
+
+and navigate to:
+
+- http://localhost:8080 to run all benchmarks, or
+- http://localhost:8080?DeltaBlue to run a single one.
+
+All output is on the JavaScript console.
+
+The standard runner (see below) has also been modified to output checked mode run times.
+
+## From main repository....
+
 Ton 80 is a benchmark suite for Dart.
 
 In it's current setup, the Ton80 benchmark suite is easy to run and
