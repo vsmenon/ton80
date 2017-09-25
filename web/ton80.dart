@@ -51,7 +51,7 @@ void main(arguments) {
   for (Map category in CATEGORIES.values) {
     for (String benchmark in category['BENCHMARKS']) {
       if (filter != null && filter != benchmark) continue;
-      Iterable<Runner> enabled = category['RUNNERS'].where((e) => e.isEnabled);
+      Iterable<Runner> enabled = category['RUNNERS'].where((Runner e) => e.isEnabled);
       if (enabled.isEmpty) continue;
       print('Running $benchmark...');
       for (Runner runner in enabled) {

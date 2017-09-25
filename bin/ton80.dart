@@ -10,15 +10,19 @@ import 'dart:math' as math;
 
 final Runner runnerForDart = new DartRunner();
 final Runner runnerForDart2JS = new Dart2JSRunner();
+final Runner runnerForDartChecked = new DartCheckedRunner();
+final Runner runnerForDart2JSChecked = new Dart2JSCheckedRunner();
 final Runner runnerForJS = new JSRunner();
 final Runner runnerForWrk = new DartWrkRunner();
 
 final CATEGORIES = {
   'BASE' : {
     'RUNNERS': [
-        runnerForDart,
+        // runnerForDart,
+        runnerForDartChecked,
         runnerForDart2JS,
-        runnerForJS,
+        runnerForDart2JSChecked,
+        // runnerForJS,
     ],
     'BENCHMARKS': [
         'DeltaBlue',
@@ -97,18 +101,36 @@ abstract class Runner {
 class DartRunner extends Runner {
   void run(String benchmark) {
     List<double> dart = extractScores(() => io.Process.runSync(pathToDart, [
-      '-c', source(benchmark, 'dart', '$benchmark.dart'),
+      source(benchmark, 'dart', '$benchmark.dart'),
     ]));
     print('  - Dart    : ${format(dart, "runs/sec")}');
+  }
+}
+
+class DartCheckedRunner extends Runner {
+  void run(String benchmark) {
+    List<double> dart = extractScores(() => io.Process.runSync(pathToDart, [
+      '-c', source(benchmark, 'dart', '$benchmark.dart'),
+    ]));
+    print('  - Dart Checked : ${format(dart, "runs/sec")}');
   }
 }
 
 class Dart2JSRunner extends Runner {
   void run(String benchmark) {
     var scores = extractScores(() => io.Process.runSync(pathToJS, [
-        source(benchmark, 'dart', '$benchmark.checked.js'),
+        source(benchmark, 'dart', '$benchmark.dart.js'),
     ]));
     print('  - Dart2JS : ${format(scores, "runs/sec")}');
+  }
+}
+
+class Dart2JSCheckedRunner extends Runner {
+  void run(String benchmark) {
+    var scores = extractScores(() => io.Process.runSync(pathToJS, [
+        source(benchmark, 'dart', '$benchmark.checked.js'),
+    ]));
+    print('  - Dart2JS Checked : ${format(scores, "runs/sec")}');
   }
 }
 
@@ -216,6 +238,7 @@ List<List<double>> extractWrkScores(io.ProcessResult generator(),
   for (int i = 0; i < iterations; i++) {
     io.ProcessResult result = generator();
     String output = result.stdout;
+    print(result);
     var data = output.split('\n').take(3).map(double.parse).toList();
     requestsPerSecond.add(data[0]);
     latency.add(data[1]);

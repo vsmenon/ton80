@@ -109,7 +109,7 @@ class FluidField {
   Float64List v, v_prev;
   final int width, height;
   final int rowSize;
-  var displayFunc;
+  void Function(Field) displayFunc;
 
   static FluidField _lastCreated;
 
@@ -385,14 +385,14 @@ class FluidField {
     project(u, v, u0, v0 );
   }
 
-  var uiCallback;
+  void Function(Field) uiCallback;
 
 
-  void setDisplayFunction(func) {
+  void setDisplayFunction(void Function(Field) func) {
     displayFunc = func;
   }
 
-  void setUICallback(callback) {
+  void setUICallback(void Function(Field) callback) {
     uiCallback = callback;
   }
 
