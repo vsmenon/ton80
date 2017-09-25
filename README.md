@@ -2,8 +2,12 @@ Ton 80
 ======
 
 This is a slightly modified version of [the primary Ton80 repository](https://github.com/dart-lang/ton80)
-modified to experiment with DDC.  DDC doesn't fill easily into the main Ton80 runner.
+modified to experiment with DDC.  DDC doesn't fit easily into the main Ton80 runner.
 Instead, I've added a web entrypoint for DDC (which also makes it easy to use Chrome profiling tools).
+
+This will only work with recent versions of `pub` that support DDC.
+
+Make sure the version of DDC / the SDK that you want to test is first on your path (e.g., your built `dart-sdk/bin` directory).
 
 ```
 > pub get
