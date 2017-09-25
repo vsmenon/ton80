@@ -5,6 +5,12 @@ packages:
     description: args
     source: hosted
     version: "0.13.0"
+  browser:
+    description:
+      name: browser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.10.0+2"
   matcher:
     description: matcher
     source: hosted
@@ -17,3 +23,5 @@ packages:
     description: quiver
     source: hosted
     version: "0.21.3"
+sdks:
+  dart: ">=1.4.0 <=2.0.0-edge.5e4cdec49f03d7c3cc5ec4df9ab85ba0ad00186f"
