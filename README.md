@@ -5,13 +5,13 @@ This is a slightly modified version of [the primary Ton80 repository](https://gi
 modified to experiment with DDC.  DDC doesn't fit easily into the main Ton80 runner.
 Instead, I've added a web entrypoint for DDC (which also makes it easy to use Chrome profiling tools).
 
-This will only work with recent versions of `pub` that support DDC.
+It uses the new `package:build` to drive DDC.
 
 Make sure the version of DDC / the SDK that you want to test is first on your path (e.g., your built `dart-sdk/bin` directory).
 
 ```
 > pub get
-> pub serve
+> dart tool/build.dart
 ```
 
 and navigate to:
@@ -21,9 +21,13 @@ and navigate to:
 
 All output is on the JavaScript console.
 
+Notes:
+- Some of these benchmarks still have dynamic calls.  These should be converted to typed ones.
+- DDC is not particular efficient on typed arrays.
+
 The standard runner (see below) has also been modified to output checked mode run times.
 
-## From main repository....
+## README from main repository....
 
 Ton 80 is a benchmark suite for Dart.
 
