@@ -7,8 +7,8 @@
 part of ray_trace;
 
 class Ray {
-  final position;
-  final direction;
+  final Vector position;
+  final Vector direction;
 
   Ray(this.position, this.direction);
   String toString() {
@@ -18,10 +18,10 @@ class Ray {
 
 
 class Camera {
-  final position;
-  final lookAt;
-  final up;
-  var equator, screen;
+  final Vector position;
+  final Vector lookAt;
+  final Vector up;
+  Vector equator, screen;
 
   Camera(this.position, this.lookAt, this.up) {
     equator = lookAt.normalize().cross(up);

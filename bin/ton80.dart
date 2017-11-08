@@ -19,7 +19,7 @@ final CATEGORIES = {
   'BASE' : {
     'RUNNERS': [
         // runnerForDart,
-        runnerForDartChecked,
+        // runnerForDartChecked,
         runnerForDart2JS,
         runnerForDart2JSChecked,
         // runnerForJS,

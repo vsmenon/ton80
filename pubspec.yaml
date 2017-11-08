@@ -5,9 +5,14 @@ environment:
   sdk: '>=1.2.0'
 dependencies:
   browser: '^0.10.0'
-  path: '>=1.3.0 <1.4.0'
+  path: '>=1.3.0 <=1.4.2'
   quiver: '>=0.21.0 <0.23.0'
   args: '>=0.13.0 <0.14.0'
+dev_dependencies:
+  build: 'any'
+  build_compilers: 'any'
+  build_runner: 'any'
+  build_test: 'any'
 web:
   compiler:
     debug: dartdevc
