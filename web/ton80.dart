@@ -8,7 +8,7 @@ import 'package:args/args.dart' as args;
 import 'dart:math' as math;
 import 'dart:html' as html;
 
-import 'package:ton80/src/common/dart/BenchmarkBase.dart';
+import 'package:ton80/src/common/dart/BenchmarkBase.dart' as BenchmarkBase;
 import 'package:ton80/src/DeltaBlue/dart/DeltaBlue.dart' as DeltaBlue;
 import 'package:ton80/src/Richards/dart/Richards.dart' as Richards;
 import 'package:ton80/src/FluidMotion/dart/FluidMotion.dart' as FluidMotion;
@@ -136,7 +136,7 @@ double computeTDistribution(int n) {
   else return TABLE[n];
 }
 
-List<double> extractScores(BenchmarkBase Function() generator,
+List<double> extractScores(BenchmarkBase.BenchmarkBase Function() generator,
                            [int iterations = 10]) {
   List<double> scores = [];
   for (int i = 0; i < iterations; i++) {

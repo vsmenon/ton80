@@ -8,11 +8,27 @@ dependencies:
   path: '>=1.3.0 <=1.4.2'
   quiver: '>=0.21.0 <0.23.0'
   args: '>=0.13.0 <0.14.0'
-dev_dependencies:
-  build: 'any'
-  build_compilers: 'any'
-  build_runner: 'any'
-  build_test: 'any'
+dependency_overrides:
+  build:
+    git:
+      url: https://github.com/dart-lang/build
+      ref: kernel
+      path: build
+  build_compilers:
+    git:
+      url: https://github.com/dart-lang/build
+      ref: kernel
+      path: build_compilers
+  build_runner:
+    git:
+      url: https://github.com/dart-lang/build
+      ref: kernel
+      path: build_runner
+  build_test:
+    git:
+      url: https://github.com/dart-lang/build
+      ref: kernel
+      path: build_test
 web:
   compiler:
     debug: dartdevc

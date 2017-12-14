@@ -30,7 +30,7 @@ packages:
       name: bazel_worker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.6"
+    version: "0.1.8"
   boolean_selector:
     description:
       name: boolean_selector
@@ -45,34 +45,60 @@ packages:
     version: "0.10.0+2"
   build:
     description:
-      name: build
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.11.0"
+      path: build
+      ref: kernel
+      resolved-ref: "4003000177c79bf66be5b9d4e3f382089fa145e1"
+      url: "https://github.com/dart-lang/build"
+    source: git
+    version: "0.11.2"
   build_barback:
     description:
       name: build_barback
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.0+2"
+    version: "0.5.0"
   build_compilers:
     description:
-      name: build_compilers
+      path: build_compilers
+      ref: kernel
+      resolved-ref: "4003000177c79bf66be5b9d4e3f382089fa145e1"
+      url: "https://github.com/dart-lang/build"
+    source: git
+    version: "0.1.1-dev"
+  build_config:
+    description:
+      name: build_config
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.1"
+    version: "0.1.1"
   build_runner:
     description:
-      name: build_runner
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.6.0+1"
+      path: build_runner
+      ref: kernel
+      resolved-ref: "4003000177c79bf66be5b9d4e3f382089fa145e1"
+      url: "https://github.com/dart-lang/build"
+    source: git
+    version: "0.7.0-dev"
   build_test:
     description:
-      name: build_test
+      path: build_test
+      ref: kernel
+      resolved-ref: "4003000177c79bf66be5b9d4e3f382089fa145e1"
+      url: "https://github.com/dart-lang/build"
+    source: git
+    version: "0.9.2"
+  built_collection:
+    description:
+      name: built_collection
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.0"
+    version: "1.6.2"
+  built_value:
+    description:
+      name: built_value
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.3.3"
   charcode:
     description:
       name: charcode
@@ -85,6 +111,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2+1"
+  code_builder:
+    description:
+      name: code_builder
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.4.0"
   code_transformers:
     description:
       name: code_transformers
@@ -115,6 +147,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.14.1"
+  dart_style:
+    description:
+      name: dart_style
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.8"
   fixnum:
     description:
       name: fixnum
@@ -133,6 +171,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.5"
+  graphs:
+    description:
+      name: graphs
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   html:
     description:
       name: html
@@ -205,12 +249,24 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
+  millisecond:
+    description:
+      name: millisecond
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   mime:
     description:
       name: mime
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.4"
+    version: "0.9.5"
+  multi_server_socket:
+    description:
+      name: multi_server_socket
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   node_preamble:
     description:
       name: node_preamble
@@ -318,7 +374,7 @@ packages:
       name: stack_trace
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.9.0"
+    version: "1.9.1"
   stream_channel:
     description:
       name: stream_channel
@@ -348,7 +404,7 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.27+1"
+    version: "0.12.29"
   typed_data:
     description:
       name: typed_data
@@ -380,4 +436,4 @@ packages:
     source: hosted
     version: "2.1.13"
 sdks:
-  dart: ">=1.24.0 <=2.0.0-edge.f2478e552682c59a823f7f417074f7275e95acc9"
+  dart: ">=2.0.0-dev <=2.0.0-edge.c1d83e3601e53fd0afc2864e65e4a43515050ad0"
