@@ -12,22 +12,27 @@ dependency_overrides:
   build:
     git:
       url: https://github.com/dart-lang/build
-      ref: kernel
+      ref: master
       path: build
-  build_compilers:
+  build_config:
     git:
       url: https://github.com/dart-lang/build
-      ref: kernel
-      path: build_compilers
+      ref: master
+      path: build_config
+  build_web_compilers:
+    git:
+      url: https://github.com/dart-lang/build
+      ref: master
+      path: build_web_compilers
   build_runner:
     git:
       url: https://github.com/dart-lang/build
-      ref: kernel
+      ref: master
       path: build_runner
   build_test:
     git:
       url: https://github.com/dart-lang/build
-      ref: kernel
+      ref: master
       path: build_test
 web:
   compiler:
